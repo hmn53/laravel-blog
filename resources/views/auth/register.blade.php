@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+<header class="masthead" style="background-image: url(&quot;{{asset('img/login-bg.jpg')}}&quot;);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="site-heading">
+                    <h1>Register</h1><span class="subheading">Register to continue</span></div>
+            </div>
+        </div>
+    </div>
+</header>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
