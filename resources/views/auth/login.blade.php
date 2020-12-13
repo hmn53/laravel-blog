@@ -75,6 +75,12 @@
                                 @endif
                             </div>
                         </div>
+                        <br>
+                        <div class="form-group row mb-0">
+                             <div class="col-md-8 offset-md-4">
+                                <span>No a member? <a href="/register">Register now.</a></span>
+                             </div>
+                        </div>
                     </form>
                 </div>
             </div>

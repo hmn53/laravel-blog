@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="site-heading">
-                    <h1>Technology Blog</h1><span class="subheading"></span></div>
+                    <h1>Blogs by {{$user}}</h1><span class="subheading"></span></div>
             </div>
         </div>
     </div>
@@ -19,16 +19,16 @@
         <div class="col-md-10 col-lg-8">
             @if (count($blogs)>0)
             @foreach ($blogs->all() as $blog)
-                <div class="post-preview">
-                    <a href="/show/{{$blog['id']}}">
-                        <h2 class="post-title">{{$blog['title']}}</h2>
-                        <h3 class="post-subtitle">{{$blog['subtitle']}}</h3>
-                    </a>
-                    <p class="post-meta">Posted by&nbsp;<a href="/user/{{$blog->user_id}}">{{$blog['user_name']}}</a> on {{$blog['created_at']->format('d M Y H:i')}}</p>
-                </div>
-                <hr>
+            <div class="post-preview">
+                <a href="/show/{{$blog['id']}}">
+                    <h2 class="post-title">{{$blog['title']}}</h2>
+                    <h3 class="post-subtitle">{{$blog['subtitle']}}</h3>
+                </a>
+                <p class="post-meta">Posted by&nbsp;<a href="/user/{{$blog->user_id}}">{{$blog['user_name']}}</a> on {{$blog['created_at']->format('d M Y H:i')}}</p>
+            </div>
+            <hr>
             @endforeach
-
+            {{$blogs->links()}}
             @else
                 <h2 class="post-title">No Blogs Found! </h2>
             @endif
